@@ -14,7 +14,7 @@
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">About</a>
-                </li> 
+                </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Feedback</a>
                 </li>
@@ -23,9 +23,9 @@
                 </li>
                 <li class="nav-item dropdown show">
                     <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
-                        <?php
-                        $query = $this->db->get_where('user', array('id_user' => $this->session->userdata('id_user')));
-                        ?>
+                        <!-- <?php
+                                $query = $this->db->get_where('user', array('id_user' => $this->session->userdata('id_user')));
+                                ?>
                         <?php foreach ($query->result() as $value) { ?>
                             <div class="image">
                                 <?php if ($value->foto == '') { ?>
@@ -34,17 +34,15 @@
                                     <img src="<?php echo base_url('assets/img/' . $value->foto); ?>" class="img-profile rounded-circle" alt="User Image">
                                 <?php } ?>
                             </div>
-                        <?php } ?>
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nama_user'); ?></span>
+                        <?php } ?> -->
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nama_user'); ?>tuh kan aku ngga bisa bikin session</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right show">
-                        <span class="dropdown-item dropdown-header"><?php echo $this->session->userdata('nama_user'); ?></span>
+                        <span class="dropdown-item dropdown-header"><?php echo $this->session->userdata('nama_user'); ?>aduh sessionnya ngga muncul :D</span>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-envelope mr-2"></i> 4 new messages
-                            <span class="float-right text-muted text-sm">3 mins</span>
+                            My Profile
                         </a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?= base_url('auth/keluar'); ?>" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Keluar
