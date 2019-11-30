@@ -28,10 +28,10 @@
                                         <hr>
                                         <a href="<?= base_url('welcome') ?>" class="btn btn-danger btn-user btn-block">Batal</a>
                                         <div class="text-center">
-                                            <a class="small" href="<?= base_url('auth/forgotpassword') ?>">Forgot Password?</a>
+                                            <a class="small" href="<?= base_url('auth/forgotpassword') ?>">Lupa Password?</a>
                                         </div>
                                         <div class="text-center">
-                                            <a class="small" href="<?= base_url('auth/registration') ?>">Create an Account!</a>
+                                            <a class="small" href="<?= base_url('auth/daftar') ?>">Buat Akun!</a>
                                         </div>
                                     </div>
                                 </div>
