@@ -8,8 +8,8 @@ class Welcome extends CI_Controller
 	{
 		$data['title'] = 'Satellite imagery catalog';
 		$this->load->view('templates/header', $data);
-		$this->load->view('templates/navbar', $data);
-		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/navbar_welcome', $data);
+		$this->load->view('templates/sidebar_welcome', $data);
 		$this->load->view('welcome/home', $data);
 		$this->load->view('templates/footer');
 	}

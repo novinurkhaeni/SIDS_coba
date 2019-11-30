@@ -21,16 +21,21 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Guide</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Daftar</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?= base_url('auth') ?>" class="nav-link">Login</a>
-                </li>
                 <li class="nav-item dropdown show">
                     <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
+                        <?php
+                        $query = $this->db->get_where('user', array('id_user' => $this->session->userdata('id_user')));
+                        ?>
+                        <?php foreach ($query->result() as $value) { ?>
+                            <div class="image">
+                                <?php if ($value->foto == '') { ?>
+                                    <img src="<?php echo base_url(); ?>assets/img/pp.jpg" class="img-profile rounded-circle" alt="User Image">
+                                <?php } else { ?>
+                                    <img src="<?php echo base_url('assets/img/' . $value->foto); ?>" class="img-profile rounded-circle" alt="User Image">
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nama_user'); ?></span>
-                        <img class="img-profile rounded-circle" src="">
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right show">
                         <span class="dropdown-item dropdown-header"><?php echo $this->session->userdata('nama_user'); ?></span>

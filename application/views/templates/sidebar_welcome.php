@@ -8,26 +8,6 @@
 
             <!-- Sidebar -->
             <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <?php
-                    $query = $this->db->get_where('user', array('id_user' => $this->session->userdata('id_user')));
-                    ?>
-                    <?php foreach ($query->result() as $value) { ?>
-                        <div class="pull-left image">
-                            <?php if ($value->foto == '') { ?>
-                                <img src="<?php echo base_url(); ?>assets/img/pp.jpg" class="img-circle" alt="User Image">
-                            <?php } else { ?>
-                                <img src="<?php echo base_url('assets/img/' . $value->foto); ?>" class="img-circle" alt="User Image">
-                            <?php } ?>
-                        </div>
-                    <?php } ?>
-                    <div class="info">
-                        <a href="#" class="d-block"><?php echo $this->session->userdata('nama_user'); ?></a>
-                        <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
-                    </div>
-                </div>
-
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

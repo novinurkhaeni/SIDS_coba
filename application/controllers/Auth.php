@@ -50,7 +50,7 @@ class Auth extends CI_Controller
             $this->db->update('admin', $data, array('id_admin' => $sess->id_admin));
             $sess_data2['last_login'] = $sess->last_login;
             $this->session->set_userdata($sess_data2);
-            redirect('welcome');
+            redirect('user');
         }
         $this->session->set_flashdata(
             'message',
@@ -59,9 +59,17 @@ class Auth extends CI_Controller
         redirect('auth');
     }
 
+    public function daftar()
+    {
+        $data['title'] = 'Membuat Akun';
+        $this->load->view('templates/auth_header', $data); //memanggil templates header
+        $this->load->view('auth/daftar', $data); //memanggil view daftar
+        $this->load->view('templates/auth_footer'); //memanggil templates footer
+    }
+
     public function keluar()
     {
         $this->session->sess_destroy();
-        redirect('/');
+        redirect('welcome');
     }
 }
