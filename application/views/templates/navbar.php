@@ -14,7 +14,7 @@
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">About</a>
-                </li>
+                </li> 
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Feedback</a>
                 </li>
