@@ -27,6 +27,25 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="<?= base_url('auth') ?>" class="nav-link">Login</a>
                 </li>
+                <li class="nav-item dropdown show">
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nama_user'); ?></span>
+                        <img class="img-profile rounded-circle" src="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right show">
+                        <span class="dropdown-item dropdown-header"><?php echo $this->session->userdata('nama_user'); ?></span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 new messages
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?= base_url('auth/keluar'); ?>" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Keluar
+                        </a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <!-- /.navbar -->

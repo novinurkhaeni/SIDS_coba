@@ -36,7 +36,7 @@ class Auth extends CI_Controller
             'username' => $this->input->post('username', TRUE),
             'password' => md5($this->input->post('password', TRUE))
         );
-        $hasil = $this->My_model->masuk_admin($data);
+        $hasil = $this->My_model->masuk($data);
         if ($hasil->num_rows() == 1) {
             foreach ($hasil->result() as $sess) {
                 $sess_data['logged_in'] = 'Sudah Login';
@@ -57,5 +57,11 @@ class Auth extends CI_Controller
             '<div class="alert alert-danger text-center"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> Username & Password Salah</div>'
         );
         redirect('auth');
+    }
+
+    public function keluar()
+    {
+        $this->session->sess_destroy();
+        redirect('/');
     }
 }
