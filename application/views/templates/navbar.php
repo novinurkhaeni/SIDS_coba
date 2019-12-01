@@ -14,7 +14,7 @@
                     <a href="<?= base_url('welcome') ?>" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">About</a>
+                    <a href="<?php echo base_url('about'); ?>" class="nav-link">About</a>
                 </li> 
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Feedback</a>
