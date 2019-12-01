@@ -33,4 +33,14 @@ class Welcome extends CI_Controller
 		$this->load->view('welcome/feedback', $data);
 		$this->load->view('templates/footer');
 	}
+
+	public function guide()
+	{
+		$data['title'] = 'Guide';
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/navbar_welcome', $data);
+		$this->load->view('templates/sidebar_welcome', $data);
+		$this->load->view('welcome/guide', $data);
+		$this->load->view('templates/footer');
+	}
 }
