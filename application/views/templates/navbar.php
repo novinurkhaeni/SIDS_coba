@@ -10,7 +10,7 @@
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?= base_url('welcome') ?>" class="nav-link">Home</a>
+                    <a href="<?= base_url('user') ?>" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">About</a>
@@ -23,9 +23,9 @@
                 </li>
                 <li class="nav-item dropdown show">
                     <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
-                        <!-- <?php
-                                $query = $this->db->get_where('user', array('id_user' => $this->session->userdata('id_user')));
-                                ?>
+                        <?php
+                        $query = $this->db->get_where('user', array('id_user' => $this->session->userdata('id_user')));
+                        ?>
                         <?php foreach ($query->result() as $value) { ?>
                             <div class="image">
                                 <?php if ($value->foto == '') { ?>
@@ -34,7 +34,7 @@
                                     <img src="<?php echo base_url('assets/img/' . $value->foto); ?>" class="img-profile rounded-circle" alt="User Image">
                                 <?php } ?>
                             </div>
-                        <?php } ?> -->
+                        <?php } ?>
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nama_user'); ?>tuh kan aku ngga bisa bikin session</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right show">

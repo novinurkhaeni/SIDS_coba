@@ -9,14 +9,21 @@
                             <!-- SEARCH FORM -->
                             <form class="form-inline mt-1">
                                 <div class="input-group input-group-sm">
-                                    <input class="form-control form-control-navbar" type="search" placeholder="criteria summary" aria-label="Search">
                                     <div class="input-group-append">
                                         <button class="btn btn-navbar" type="submit">
                                             <i class="fas fa-search"></i>
                                         </button>
                                     </div>
+                                    <input class="form-control form-control-navbar" type="search" placeholder="criteria summary" aria-label="Search">
                                 </div>
                             </form>
+
+                            <!-- <div class="input-group input-group-search mt-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><span class="fas fa-search"></span></span>
+                                </div>
+                                <input type="text" class="form-control" data-toggle="dropdown" aria-label="Search" placeholder="Search" aria-expanded="false">
+                            </div> -->
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
