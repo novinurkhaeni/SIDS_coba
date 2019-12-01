@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <button type="button" class="btn btn-primary btn-sm">Contact Us</button>
+    <a type="button" href="<?= base_url('welcome/contact'); ?>" class="btn btn-primary btn-sm">Contact Us</a>
     <hr>
     <strong>© <?= date('Y'); ?> - <a href="#">www.brol.litbang.kkp.go.id</a></strong>
     <div class="float-right d-none d-sm-inline-block">
