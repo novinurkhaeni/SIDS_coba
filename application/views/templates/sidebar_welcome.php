@@ -12,9 +12,9 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                         with font-awesome or any other icon font library -->
-                         <center class="nav-header center"><b>LAYER MENU</b></center>
-                         <li class="nav-item has-treeview">
+                           with font-awesome or any other icon font library -->
+                           <center class="nav-header center"><b>LAYER MENU</b></center>
+                           <li class="nav-item has-treeview">
                             <a href="#" class="nav-link active">
                                 <!-- <i class="nav-icon fas fa-folder"></i> -->
                                 <center>
@@ -116,12 +116,11 @@
                     </ul>
                 </nav>
                 <hr>
-                <center class="nav-header center-auto"><b>LAYER MENU</b></center>
                 <div class="card" style="width: 14,5rem;">
                   <div class="card-body">
                     <h5 class="card-title">Satellite Imagery Catalog</h5>
                     <br>
-                    <p class="center">Sprovides seamless access to IMRO Research and monitoring oceanography data. Users have the ability to search, browse, ore use a map-based interface to discover data.</p>
+                    <p class="center">provides seamless access to IMRO Research and monitoring oceanography data. Users have the ability to search, browse, ore use a map-based interface to discover data.</p>
                 </div>
             </div>
 
