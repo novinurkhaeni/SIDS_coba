@@ -1,5 +1,5 @@
             <div class="row justify-content-center">
-                <div class="col-lg-5">
+                <div class="col-lg-3">
                     <div class="card o-hidden border-0 shadow-lg my-5">
                         <div class="card-body p-0">
                             <!-- Nested Row within Card Body -->
@@ -7,10 +7,11 @@
                                 <div class="col-lg">
                                     <div class="p-5">
                                         <div class="text-center">
-                                            <img src="<?php echo base_url('assets/dist/img/kkp.png'); ?>" style="width: 150px">
-                                            <h5 class="h5 text-gray-900 mt-2 mb-4">Login Page</h5>
+                                            <!-- <img src="<?php echo base_url('assets/dist/img/kkp.png'); ?>" style="width: 150px"> -->
+                                            <!-- <h5 class="h5 text-gray-9000 mt-2 mb-4"><b>Sign In</b></h5> -->
+                                            <h3><b>Sign In</b></h3>
                                         </div>
-
+                                        <br>
                                         <?= $this->session->flashdata('message'); ?>
                                         <!--memanggil &menampilkan message flash data-->
 
@@ -27,18 +28,19 @@
                                         </form>
                                         <hr>
                                         <a href="<?= base_url('welcome') ?>" class="btn btn-danger btn-user btn-block">Batal</a>
+                                        <br>
+                                        <p class="text-center">---------- OR ----------</p>
                                         <div class="text-center">
-                                            <a class="small" href="<?= base_url('auth/forgotpassword') ?>">Lupa Password?</a>
-                                        </div>
-                                        <div class="text-center">
-                                            <a class="small" href="<?= base_url('auth/daftar') ?>">Buat Akun!</a>
+                                          <div class="col-12">
+                                            <a class="small-left" href="<?= base_url('auth/lupapassword') ?>">Forgot Password?</a>
+                                            <br>
+                                            <a class="small-right" href="<?= base_url('auth/daftar') ?>">Create New Account!</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
+        </div>

@@ -72,4 +72,12 @@ class Auth extends CI_Controller
         $this->session->sess_destroy();
         redirect('welcome');
     }
+
+    public function lupapassword()
+    {
+        $data['title'] = 'Lupa Password';
+        $this->load->view('templates/auth_header', $data); //memanggil templates header
+        $this->load->view('auth/lupapassword', $data); //memanggil view daftar
+        $this->load->view('templates/auth_footer'); //memanggil templates footer
+    }
 }
