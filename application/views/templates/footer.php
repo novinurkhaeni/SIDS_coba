@@ -1,4 +1,6 @@
 <footer class="main-footer">
+    <button type="button" class="btn btn-primary btn-sm">Contact Us</button>
+    <hr>
     <strong>© <?= date('Y'); ?> - <a href="#">www.brol.litbang.kkp.go.id</a></strong>
     <div class="float-right d-none d-sm-inline-block">
         <a href=""><i class="fa fa-question-circle"></i> Bantuan</a>
