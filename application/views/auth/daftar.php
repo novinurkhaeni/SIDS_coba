@@ -2,15 +2,13 @@
     <div class="col-lg-4">
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg">
                         <div class="p-5">
                             <div class="text-center">
-                                <img src="<?php echo base_url('assets/dist/img/kkp.png'); ?>" style="width: 150px">
-                                <h5 class="h5 text-gray-900 mt-2 mb-4">Login Page</h5>
+                                <h3><i class="fas fa-user"></i><b> User Registration</b></h3>
                             </div>
-
+                            <br>
                             <?= $this->session->flashdata('message'); ?>
                             <!--memanggil &menampilkan message flash data-->
 
@@ -61,18 +59,19 @@
                             </form>
                             <hr>
                             <a href="<?= base_url('welcome') ?>" class="btn btn-danger btn-user btn-block">Batal</a>
+                            <br>
+                            <p class="text-center">---------- OR ----------</p>
                             <div class="text-center">
-                                <a class="small" href="<?= base_url('auth/lupapassword') ?>">Lupa Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="<?= base_url('auth') ?>">Sudah Punya Akun</a>
+                              <div class="col-12">
+                                <a class="small-left" href="<?= base_url('auth/lupapassword') ?>">Lupa Password?</a>
+                                <br>
+                                <a class="small-right" href="<?= base_url('auth') ?>">Sudah Punya Akun</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
+</div>
 </div>

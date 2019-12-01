@@ -25,7 +25,7 @@
                     <a href="<?= base_url('auth/daftar') ?>" class="nav-link">Daftar</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?= base_url('auth') ?>" class="nav-link">Login</a>
+                    <a href="<?= base_url('auth') ?>" class="nav-link"><i class="fa fa-lock"></i> Login</a>
                 </li>
             </ul>
         </nav>

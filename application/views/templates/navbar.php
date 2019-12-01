@@ -14,13 +14,13 @@
                     <a href="<?= base_url('welcome') ?>" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url('about'); ?>" class="nav-link">About</a>
-                </li> 
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Feedback</a>
+                    <a href="<?= base_url('welcome/about'); ?>" class="nav-link">About</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Guide</a>
+                    <a href="<?= base_url('welcome/feedback'); ?>" class="nav-link">Feedback</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="<?php echo base_url('welcome/guide'); ?>" class="nav-link">Guide</a>
                 </li>
                 <li class="nav-item dropdown show">
                     <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
