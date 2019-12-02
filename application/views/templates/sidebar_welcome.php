@@ -13,8 +13,8 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                            with font-awesome or any other icon font library -->
-                           <center class="nav-header center"><b>LAYER MENU</b></center>
-                           <li class="nav-item has-treeview">
+                        <center class="nav-header center"><b>LAYER MENU</b></center>
+                        <li class="nav-item has-treeview">
                             <a href="#" class="nav-link active">
                                 <!-- <i class="nav-icon fas fa-folder"></i> -->
                                 <center>
@@ -80,24 +80,47 @@
                                     <!-- <i class="right fas fa-angle-left"></i> -->
                                 </center>
                             </a>
+
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="./index.html" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Shapefile</p>
-                                    </a>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1" style="color:white;">Aqua Modis</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Sea Surface Temperature </option>
+                                            <option>Chlorophyll-a </option>
+                                            <option>Photosynthetically Available Radiation :</option>
+                                        </select>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./index2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Filter criteria</p>
-                                    </a>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect2" style="color:white;">Terra Modis</label>
+                                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                                            <option>Sea Surface Temperature </option>
+                                            <option>Chlorophyll-a</option>
+                                            <option>Photosynthetically Available Radiation</option>
+                                        </select>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./index3.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Dataset</p>
-                                    </a>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect2" style="color:white;">VIIRS-SNPP</label>
+                                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                                            <option>Sea Surface Temperature </option>
+                                            <option>Chlorophyll-a</option>
+                                            <option>Photosynthetically Available Radiation</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect2" style="color:white;">MODIS-VIIRS Mozaic </label>
+                                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                                            <option>Sea Surface Temperature </option>
+                                            <option>Chlorophyll-a</option>
+                                            <option>Photosynthetically Available Radiation</option>
+                                        </select>
+                                    </div>
                                 </li>
                                 <form class="form-inline mt-1">
                                     <div class="input-group input-group-sm">
@@ -117,14 +140,14 @@
                 </nav>
                 <hr>
                 <div class="card" style="width: 14,5rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Satellite Imagery Catalog</h5>
-                    <br>
-                    <p class="center">provides seamless access to IMRO Research and monitoring oceanography data. Users have the ability to search, browse, ore use a map-based interface to discover data.</p>
+                    <div class="card-body">
+                        <h5 class="card-title">Satellite Imagery Catalog</h5>
+                        <br>
+                        <p class="center">provides seamless access to IMRO Research and monitoring oceanography data. Users have the ability to search, browse, ore use a map-based interface to discover data.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- /.sidebar-menu -->
-        </div>
-        <!-- /.sidebar -->
-    </aside>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
