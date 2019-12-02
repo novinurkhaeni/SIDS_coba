@@ -6,19 +6,15 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
-            
+
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="<?= base_url('user') ?>" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-<<<<<<< HEAD
-                    <a href="#" class="nav-link">About</a>
-=======
+                <li>
                     <a href="<?= base_url('welcome/about'); ?>" class="nav-link">About</a>
->>>>>>> aa318fc3ca853b2141077a502ddd4d8c9726a7c0
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="<?= base_url('welcome/feedback'); ?>" class="nav-link">Feedback</a>
