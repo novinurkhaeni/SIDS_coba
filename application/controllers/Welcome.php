@@ -53,4 +53,14 @@ class Welcome extends CI_Controller
 		$this->load->view('welcome/contact', $data);
 		$this->load->view('templates/footer');
 	}
+
+	public function profil()
+	{
+		$data['title'] = 'Profil';
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/navbar_welcome', $data);
+		$this->load->view('templates/sidebar_welcome', $data);
+		$this->load->view('welcome/profil', $data);
+		$this->load->view('templates/footer');
+	}
 }
