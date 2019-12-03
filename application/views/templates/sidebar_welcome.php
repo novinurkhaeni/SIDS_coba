@@ -81,59 +81,83 @@
                                 </center>
                             </a>
 
-                            <ul class="nav nav-treeview">
+                            <ul class="nav nav-treeview" style="color:white;">
                                 <li class="nav-item">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1" style="color:white;">Aqua Modis</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>Sea Surface Temperature </option>
-                                            <option>Chlorophyll-a </option>
-                                            <option>Photosynthetically Available Radiation :</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect2" style="color:white;">Terra Modis</label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                                            <option>Sea Surface Temperature </option>
-                                            <option>Chlorophyll-a</option>
-                                            <option>Photosynthetically Available Radiation</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect2" style="color:white;">VIIRS-SNPP</label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                                            <option>Sea Surface Temperature </option>
-                                            <option>Chlorophyll-a</option>
-                                            <option>Photosynthetically Available Radiation</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect2" style="color:white;">MODIS-VIIRS Mozaic </label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                                            <option>Sea Surface Temperature </option>
-                                            <option>Chlorophyll-a</option>
-                                            <option>Photosynthetically Available Radiation</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <form class="form-inline mt-1">
-                                    <div class="input-group input-group-sm">
-                                        <input class="form-control form-control-navbar" type="search" placeholder="criteria summary" aria-label="Search">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-navbar" type="submit">
-                                                <i class="fas fa-search"></i>
-                                            </button>
+                                    <form method="post" action="/Tests/Post/">
+                                        <h5>Aqua Modis</h5>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="aqua1" value="">
+                                                <label for="aqua1" class="custom-control-label">Sea Surface Temperature</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="aqua2" checked="">
+                                                <label for="aqua2" class="custom-control-label">Chlorophyll-a</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="aqua3">
+                                                <label for="aqua3" class="custom-control-label">Photosynthetically Available Radiation</label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <button type="button" class="btn btn-default waves-effect right"><b>RESULT</b></button>
+                                        <h5>Terra Modis</h5>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="terra1" value="">
+                                                <label for="terra1" class="custom-control-label">Sea Surface Temperature</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="terra2" checked="">
+                                                <label for="terra2" class="custom-control-label">Chlorophyll-a</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="terra3">
+                                                <label for="terra3" class="custom-control-label">Photosynthetically Available Radiation</label>
+                                            </div>
+                                        </div>
+                                        <h5>VIIRS-SNPP</h5>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="snpp1" value="">
+                                                <label for="snpp1" class="custom-control-label">Sea Surface Temperature</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="snpp2" checked="">
+                                                <label for="snpp2" class="custom-control-label">Chlorophyll-a</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="snpp3">
+                                                <label for="snpp3" class="custom-control-label">Photosynthetically Available Radiation</label>
+                                            </div>
+                                        </div>
+                                        <h5>MODIS-VIIRS Mozaic</h5>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="mozaic1" value="">
+                                                <label for="mozaic1" class="custom-control-label">Sea Surface Temperature</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="mozaic2" checked="">
+                                                <label for="mozaic2" class="custom-control-label">Chlorophyll-a</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="mozaic3">
+                                                <label for="mozaic3" class="custom-control-label">Photosynthetically Available Radiation</label>
+                                            </div>
+                                        </div>
+                                        <input type="submit" value="Result" class="btn btn-default waves-effect right" />
+                                    </form>
+                                    <form class="form-inline mt-1">
+                                        <div class="input-group input-group-sm">
+                                            <input class="form-control form-control-navbar" type="search" placeholder="criteria summary" aria-label="Search">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-navbar" type="submit">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <br>
+                                    <button type="button" class="btn btn-default waves-effect right"><b>RESULT</b></button>
                             </ul>
                         </li>
                     </ul>
