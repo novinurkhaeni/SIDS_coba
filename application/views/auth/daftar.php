@@ -14,21 +14,23 @@
 
                             <form class="user" method="post" action="<?= base_url('auth/daftar'); ?>">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Enter nama..." value="<?= set_value('nama_user'); ?>">
+                                    <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Lengkap..." value="<?= set_value('nama_user'); ?>">
                                     <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <select name="jk" id="jk" class="form-control">
+                                    <select name="jk" id="jk" class="form-control" required>
+                                        <option value="">Jenis Kelamin</option>
                                         <option value="">Laki-laki</option>
                                         <option value="">Perempuan</option>
                                     </select>
+                                    <!-- <?= form_error('jk', '<small class="text-danger pl-3">', '</small>'); ?> -->
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="tempatLahir" name="tempatLahir" placeholder="Tempat Lahir..." value="<?= set_value('tempat_lahir'); ?>">
                                     <?= form_error('tempatLahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="date" class="form-control form-control-user" id="tglLahir" name="tglLahir" placeholder="Tanggal Lahir..." value="<?= set_value('tanggal_lahir'); ?>">
+                                    <input type="date" class="form-control form-control-user" id="tglLahir" name="tglLahir" placeholder="Tanggal Lahir..." value="Tanggal Lahir">
                                     <?= form_error('tglLahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
@@ -48,8 +50,8 @@
                                     <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="password" name="password" placeholder="password...">
-                                    <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="password...">
+                                    <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="repeat password">
@@ -62,10 +64,11 @@
                             <br>
                             <p class="text-center">---------- OR ----------</p>
                             <div class="text-center">
-                              <div class="col-12">
-                                <a class="small-left" href="<?= base_url('auth/lupapassword') ?>">Lupa Password?</a>
-                                <br>
-                                <a class="small-right" href="<?= base_url('auth') ?>">Sudah Punya Akun</a>
+                                <div class="col-12">
+                                    <a class="small-left" href="<?= base_url('auth/lupapassword') ?>">Lupa Password?</a>
+                                    <br>
+                                    <a class="small-right" href="<?= base_url('auth') ?>">Sudah Punya Akun</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,5 +76,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

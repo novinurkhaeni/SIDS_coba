@@ -19,17 +19,17 @@
         </li>
         <li class="nav-item dropdown">
             <div class="user-block" data-toggle="dropdown" href="#">
-                <img class="img-circle" src="<?php echo base_url(); ?>assets/img/foto.jpg" alt="User Image">
+                <img class="img-circle" src="<?= base_url('assets/img/') . $user['foto']; ?>" alt="User Image">
             </div>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <div class="col-md-12">
                     <div class="card card-widget widget-user">
                         <div class="widget-user-header bg-info">
                             <br>
-                            <h5 class="widget-user-desc">Ridho</h5>
+                            <h5 class="widget-user-desc"><?= $user['nama_user']; ?></h5>
                         </div>
                         <div class="widget-user-image">
-                            <img class="img-circle" src="<?php echo base_url(); ?>assets/img/foto.jpg" alt="User Image">
+                            <img class="img-circle" src="<?= base_url('assets/img/') . $user['foto']; ?>" alt="User Image">
                         </div>
                         <div class="card-footer">
                             <div class="row">
