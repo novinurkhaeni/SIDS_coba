@@ -24,8 +24,20 @@
 							<h3 class="card-title">Contact Us</h3>
 						</div>
 						<div class="card-body">
-							<p>You can use any font library you like with AdminLTE 3.</p>
-							<strong>Recommendations</strong>
+							<!-- <p>You can use any font library you like with AdminLTE 3.</p> -->
+							<i class="fa fa-map-marker" aria-hidden="true"></i></i><strong> Address:</strong>
+							Jl. Baru Perancak, Negara
+							Jembrana - Bali
+							82251
+							Indonesia
+							<hr>
+							<i class="fa fa-phone" aria-hidden="true"></i><strong> Phone:</strong> 
+							(0365) 44266, 44268, 44269
+							<hr>
+							<i class="fa fa-fax" aria-hidden="true"></i><strong> Fax:</strong> 
+							(0365) 44278
+							<hr>
+							<a href="http://www.bpol.litbang.kkp.go.id">http://www.bpol.litbang.kkp.go.id</a>
 						</div>
 					</div>
 				</div>

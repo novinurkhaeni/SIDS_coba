@@ -24,8 +24,14 @@
 							<h3 class="card-title">About</h3>
 						</div>
 						<div class="card-body">
-							<p>You can use any font library you like with AdminLTE 3.</p>
-							<strong>Recommendations</strong>
+							<p><b>Balai Riset dan Observasi Laut (BROL)</b></p>
+							<p><b>Link Terkait</b></p>
+							<a href="#">Kementerian Kelautan dan Perikanan</a>
+							<br>
+							<a href="#">Badan Riset dan Sumber Daya Manusia Kelautan dan Perikanan</a>
+							<br>
+							<a href="#">Pusat Riset Kelautan, BRSDM KP</a>
+							<br>
 						</div>
 					</div>
 				</div>
