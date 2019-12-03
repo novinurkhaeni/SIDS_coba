@@ -112,7 +112,7 @@
                 </nav>
             </div>
         </aside>
-        <div class="card card-primary card-tabs">
+        <!-- <div class="card card-primary card-tabs">
             <div class="card card-primary card-tabs">
                 <div class="card-header p-0 pt-1">
                     <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
@@ -123,12 +123,12 @@
                             <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Decimal</a>
                         </li>
                     </ul>
-                </div>
-                <div class="card-body">
+                </div> -->
+        <!-- <div class="card-body">
                     <div class="tab-content" id="custom-tabs-one-tabContent">
-                        <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
-                            <!-- Lorem ipsum dolor sit amet.   -->
-                        </div>
+                        <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab"> -->
+        <!-- Lorem ipsum dolor sit amet.   -->
+        <!-- </div>
                         <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
                             Lorem ipsum dolor sit amet.
                         </div>
@@ -183,4 +183,4 @@
         </ul>
         </nav>
         </div>
-        </aside>
+        </aside> -->
