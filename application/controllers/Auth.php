@@ -6,16 +6,15 @@ class Auth extends CI_Controller
     public function __construct() //method default yang selalu dijalankan
     {
         parent::__construct(); //memanggil method construct yg ada di CI_Controller
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         $this->load->library('form_validation'); /*memanggil library form validation */
         $this->load->model('My_model');
     }
 
     public function index()
     {
-        if ($this->session->userdata('username')) {
-            redirect('user');
-        }
-
         /*rules form validation*/
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -71,7 +70,7 @@ class Auth extends CI_Controller
                     $data = [
                         'email' => $user['email'],
                         'username' => $user['username'],
-                        'nama_user' => $user['nama_user']
+                        // 'nama_user' => $user['nama_user']
                     ];
                     $this->session->set_userdata($data);
                     redirect('user');

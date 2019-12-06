@@ -3,6 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Welcome extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		if ($this->session->userdata('email')) {
+			redirect('user');
+		}
+	}
 
 	public function index()
 	{
@@ -11,7 +18,7 @@ class Welcome extends CI_Controller
 		$this->load->view('templates/navbar_welcome', $data);
 		$this->load->view('templates/sidebar_welcome', $data);
 		$this->load->view('welcome/home', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footer_welcome');
 	}
 
 	public function about()
@@ -21,7 +28,7 @@ class Welcome extends CI_Controller
 		$this->load->view('templates/navbar_welcome', $data);
 		$this->load->view('templates/sidebar_welcome', $data);
 		$this->load->view('welcome/about', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footer_welcome');
 	}
 
 	public function feedback()
@@ -31,7 +38,7 @@ class Welcome extends CI_Controller
 		$this->load->view('templates/navbar_welcome', $data);
 		$this->load->view('templates/sidebar_welcome', $data);
 		$this->load->view('welcome/feedback', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footer_welcome');
 	}
 
 	public function guide()
@@ -41,7 +48,7 @@ class Welcome extends CI_Controller
 		$this->load->view('templates/navbar_welcome', $data);
 		$this->load->view('templates/sidebar_welcome', $data);
 		$this->load->view('welcome/guide', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footer_welcome');
 	}
 
 	public function contact()
@@ -51,16 +58,6 @@ class Welcome extends CI_Controller
 		$this->load->view('templates/navbar_welcome', $data);
 		$this->load->view('templates/sidebar_welcome', $data);
 		$this->load->view('welcome/contact', $data);
-		$this->load->view('templates/footer');
-	}
-
-	public function profil()
-	{
-		$data['title'] = 'Profil';
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/navbar_welcome', $data);
-		$this->load->view('templates/sidebar_welcome', $data);
-		$this->load->view('welcome/profil', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footer_welcome');
 	}
 }

@@ -167,25 +167,25 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../examples/invoice.html" class="nav-link">
+                                    <a href="<?= base_url('welcome') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Home</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/profile.html" class="nav-link active">
+                                    <a href="<?= base_url('welcome/about'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>About</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/e_commerce.html" class="nav-link">
+                                    <a href="<?= base_url('welcome/feedback'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Feedback</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/projects.html" class="nav-link">
+                                    <a href="<?php echo base_url('welcome/guide'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Guide</p>
                                     </a>
@@ -209,13 +209,13 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/contacts.html" class="nav-link">
+                                    <a href="<?= base_url('auth/daftar') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Daftar</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/contacts.html" class="nav-link">
+                                    <a href="<?= base_url('auth') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Login</p>
                                     </a>

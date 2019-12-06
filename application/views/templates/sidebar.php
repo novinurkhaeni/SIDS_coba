@@ -166,25 +166,25 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../examples/invoice.html" class="nav-link">
+                                    <a href="<?= base_url('user') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Home</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/profile.html" class="nav-link active">
+                                    <a href="<?= base_url('user/about'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>About</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/e_commerce.html" class="nav-link">
+                                    <a href="<?= base_url('user/feedback'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Feedback</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/projects.html" class="nav-link">
+                                    <a href="<?= base_url('user/guide'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Guide</p>
                                     </a>
@@ -208,15 +208,15 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/contacts.html" class="nav-link">
+                                    <a href="<?= base_url('user/profil'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Daftar</p>
+                                        <p>Profil</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../examples/contacts.html" class="nav-link">
+                                    <a href="<?= base_url('auth/keluar'); ?>" class="nav-link" data-toggle="modal" data-target="#logoutModal">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Login</p>
+                                        <p>Keluar</p>
                                     </a>
                                 </li>
                             </ul>
