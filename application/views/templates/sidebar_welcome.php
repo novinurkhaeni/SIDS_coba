@@ -14,73 +14,69 @@
                         <!-- Add icons to the links using the .nav-icon class
                            with font-awesome or any other icon font library -->
                         <center class="nav-header center"><b>LAYER MENU</b></center>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link active">
-                                <!-- <i class="nav-icon fas fa-folder"></i> -->
-                                <center>
-                                    <b>Shapefile</b>
-                                    <!-- <i class="right fas fa-angle-left"></i> -->
-                                </center>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="./index.html" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Shapefile</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./index2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Filter criteria</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./index3.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Dataset</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link active">
-                                <!-- <i class="nav-icon fas fa-folder"></i> -->
-                                <center>
-                                    <b>Filter Kriteria</b>
-                                    <!-- <i class="right fas fa-angle-left"></i> -->
-                                </center>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="./index.html" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Shapefile</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./index2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Filter criteria</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./index3.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Dataset</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link active">
-                                <!-- <i class="nav-icon fas fa-folder"></i> -->
-                                <center>
-                                    <b>Dataset</b>
-                                    <!-- <i class="right fas fa-angle-left"></i> -->
-                                </center>
-                            </a>
 
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>
+                                    Shapefile
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="color:white;">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Shapefile</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index2.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Filter criteria</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index3.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dataset</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    Filter Kriteria
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="color:white;">
+                                <form class="form-inline mt-1">
+                                    <div class="input-group input-group-sm">
+                                        <input class="form-control form-control-navbar" type="search" placeholder="criteria summary" aria-label="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-navbar" type="submit">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                                <button type="button" class="btn btn-default waves-effect right  mb-3"><b>RESULT</b></button>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Dataset
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
                             <ul class="nav nav-treeview" style="color:white;">
                                 <li class="nav-item">
                                     <form method="post" action="/Tests/Post/">
@@ -144,9 +140,9 @@
                                                 <label for="mozaic3" class="custom-control-label">Photosynthetically Available Radiation</label>
                                             </div>
                                         </div>
-                                        <input type="submit" value="Result" class="btn btn-default waves-effect right" />
+                                        <input type="submit" value="Result" class="btn btn-default waves-effect right mb-3" />
                                     </form>
-                                    <form class="form-inline mt-1">
+                                    <!-- <form class="form-inline mt-1">
                                         <div class="input-group input-group-sm">
                                             <input class="form-control form-control-navbar" type="search" placeholder="criteria summary" aria-label="Search">
                                             <div class="input-group-append">
@@ -157,9 +153,76 @@
                                         </div>
                                     </form>
                                     <br>
-                                    <button type="button" class="btn btn-default waves-effect right"><b>RESULT</b></button>
+                                    <button type="button" class="btn btn-default waves-effect right"><b>RESULT</b></button> -->
                             </ul>
                         </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Pages
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../examples/invoice.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Home</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/profile.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>About</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/e_commerce.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Feedback</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/projects.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Guide</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/project_add.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Download</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/project_edit.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Profil Brol</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/project_detail.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Metadata</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/contacts.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Daftar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../examples/contacts.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Login</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </nav>
                 <hr>

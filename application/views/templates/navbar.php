@@ -4,6 +4,18 @@
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
     </ul>
+
+    <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
     <ul class="navbar-nav ml-auto">
         <li class="nav-item d-none d-sm-inline-block">
             <a href="<?= base_url('welcome') ?>" class="nav-link">Home</a>
@@ -16,6 +28,15 @@
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="<?php echo base_url('welcome/guide'); ?>" class="nav-link">Guide</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Download</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Profil Brol</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Metadata</a>
         </li>
         <li class="nav-item dropdown">
             <div class="user-block" data-toggle="dropdown" href="#">
