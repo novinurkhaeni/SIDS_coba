@@ -9,9 +9,12 @@
             </div>
             <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
 
-            <form action="recover-password.html" method="post">
+            <?= $this->session->flashdata('message'); ?>
+            <!--memanggil &menampilkan message flash data-->
+
+            <form action="<?= base_url('auth/forgotpassword'); ?>" method="post">
               <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-envelope"></span>

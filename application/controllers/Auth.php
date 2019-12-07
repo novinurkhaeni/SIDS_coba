@@ -6,22 +6,22 @@ class Auth extends CI_Controller
     public function __construct() //method default yang selalu dijalankan
     {
         parent::__construct(); //memanggil method construct yg ada di CI_Controller
-        if ($this->session->userdata('email')) {
-            redirect('user');
-        }
         $this->load->library('form_validation'); /*memanggil library form validation */
         $this->load->model('My_model');
     }
 
     public function index()
     {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         /*rules form validation*/
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
         if ($this->form_validation->run() == false) { //memanggil method run
             $data['title'] = 'KKP User Login';
-            $this->load->view('templates/auth_header', $data); //memanggil templates header
+            $this->load->view('templates/header', $data); //memanggil templates header
             $this->load->view('auth/login', $data); //memanggil view login
             $this->load->view('templates/auth_footer'); //memanggil templates header
         } else {
@@ -90,6 +90,9 @@ class Auth extends CI_Controller
 
     public function daftar()
     {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
         $this->form_validation->set_rules('tempatLahir', 'Tempat Lahir', 'required|trim');
         $this->form_validation->set_rules('tglLahir', 'Tanggal Lahir', 'required|trim');
@@ -109,7 +112,7 @@ class Auth extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Buat Akun';
-            $this->load->view('templates/auth_header', $data);
+            $this->load->view('templates/header', $data);
             $this->load->view('auth/daftar');
             $this->load->view('templates/auth_footer');
         } else {
@@ -226,16 +229,129 @@ class Auth extends CI_Controller
         }
     }
 
+    public function forgotPassword()
+    {
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Lupa Password';
+            $this->load->view('templates/header', $data); //memanggil templates header
+            $this->load->view('auth/lupa_password'); //memanggil view login
+            $this->load->view('templates/auth_footer');
+        } else {
+            $email = $this->input->post('email');
+            $user = $this->db->get_where('user', ['email' => $email, 'aktif' => 1])->row_array();
+
+            if ($user) {
+                $token = base64_encode(random_bytes(32));
+                $user_token = [
+                    'email' => $email,
+                    'token' => $token,
+                    'date_created' => time()
+                ];
+
+                $this->db->insert('user_token', $user_token);
+                $this->_sendEmail($token, 'forgot');
+
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Please check your email to reset your password!</div>');
+                redirect('auth/forgotpassword');
+            } else {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email is not registered or activated!</div>');
+                redirect('auth/forgotpassword');
+            }
+        }
+    }
+
+    public function resetPassword()
+    {
+        $email = $this->input->get('email');
+        $token = $this->input->get('token');
+
+        $user = $this->db->get_where('user', ['email' => $email])->row_array();
+
+        if ($user) {
+            $user_token = $this->db->get_where('user_token', ['token' => $token])->row_array();
+
+            if ($user_token) {
+                $this->session->set_userdata('reset_email', $email);
+                $this->ubahPassword();
+            } else {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Reset password failed! Wrong token.</div>');
+                redirect('auth');
+            }
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Reset password failed! Wrong email.</div>');
+            redirect('auth');
+        }
+    }
+
+    public function ubahPassword()
+    {
+        if (!$this->session->userdata('reset_email')) {
+            redirect('auth');
+        }
+
+        $this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[3]|matches[password2]');
+        $this->form_validation->set_rules('password2', 'Repeat Password', 'trim|required|min_length[3]|matches[password1]');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Ubah Password';
+            $this->load->view('templates/header', $data); //memanggil templates header
+            $this->load->view('auth/ubah_password'); //memanggil view login
+            $this->load->view('templates/auth_footer');
+        } else {
+            $password = password_hash($this->input->post('password1'), PASSWORD_DEFAULT);
+            $email = $this->session->userdata('reset_email');
+
+            $this->db->set('password', $password);
+            $this->db->where('email', $email);
+            $this->db->update('user');
+
+            $this->session->unset_userdata('reset_email');
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your password has been changed. Please login!</div>');
+            redirect('auth');
+        }
+    }
+
+    // public function recaptcha()
+    // {
+    //     // load from spark tool
+    //     // $this->load->spark('recaptcha-library/1.0.1');
+    //     // load from CI library
+    //     $this->load->library('recaptcha');
+    //     $recaptcha = $this->input->post('g-recaptcha-response');
+    //     if (!empty($recaptcha)) {
+    //         $response = $this->recaptcha->verifyResponse($recaptcha);
+    //         if (isset($response['success']) and $response['success'] === true) {
+    //             echo "You got it!";
+    //         }
+    //     }
+    //     $data = array(
+    //         'widget' => $this->recaptcha->getWidget(),
+    //         'script' => $this->recaptcha->getScriptTag(),
+    //     );
+    //     $this->load->view('auth/recaptcha', $data);
+    // }
+
     public function keluar()
     {
         $this->session->sess_destroy();
         redirect('welcome');
     }
 
+    public function blocked()
+    {
+        $data['title'] = 'Access blocked';
+        $this->load->view('templates/header', $data);
+        $this->load->view('auth/blocked');
+        $this->load->view('templates/auth_footer');
+    }
+
     public function lupapassword()
     {
         $data['title'] = 'Lupa Password';
-        $this->load->view('templates/auth_header', $data); //memanggil templates header
+        $this->load->view('templates/header', $data); //memanggil templates header
         $this->load->view('auth/lupapassword', $data); //memanggil view daftar
         $this->load->view('templates/auth_footer'); //memanggil templates footer
     }
