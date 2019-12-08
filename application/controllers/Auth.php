@@ -235,8 +235,8 @@ class Auth extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Lupa Password';
-            $this->load->view('templates/header', $data); //memanggil templates header
-            $this->load->view('auth/lupa_password'); //memanggil view login
+            $this->load->view('templates/header', $data);
+            $this->load->view('auth/lupa_password');
             $this->load->view('templates/auth_footer');
         } else {
             $email = $this->input->post('email');
@@ -346,13 +346,5 @@ class Auth extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('auth/blocked');
         $this->load->view('templates/auth_footer');
-    }
-
-    public function lupapassword()
-    {
-        $data['title'] = 'Lupa Password';
-        $this->load->view('templates/header', $data); //memanggil templates header
-        $this->load->view('auth/lupapassword', $data); //memanggil view daftar
-        $this->load->view('templates/auth_footer'); //memanggil templates footer
     }
 }
