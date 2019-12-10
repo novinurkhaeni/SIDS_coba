@@ -215,7 +215,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('auth/keluar'); ?>" class="nav-link" data-toggle="modal" data-target="#logoutModal">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-sign-out-alt"></i>
                                         <p>Keluar</p>
                                     </a>
                                 </li>

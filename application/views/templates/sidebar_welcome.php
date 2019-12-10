@@ -24,24 +24,18 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview" style="color:white;">
-                                <li class="nav-item">
-                                    <a href="./index.html" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Shapefile</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./index2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Filter criteria</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./index3.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Dataset</p>
-                                    </a>
-                                </li>
+                                <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="aqua1" value="">
+                                                <label for="aqua1" class="custom-control-label">Sea Surface Temperature</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="aqua2" checked="">
+                                                <label for="aqua2" class="custom-control-label">Chlorophyll-a</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="font-size:9pt;">
+                                                <input class="custom-control-input" type="checkbox" id="aqua3">
+                                                <label for="aqua3" class="custom-control-label">Photosynthetically Available Radiation</label>
+                                            </div>
                             </ul>
                         </li>
 
@@ -168,55 +162,55 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="<?= base_url('welcome') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-home"></i>
                                         <p>Home</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('welcome/about'); ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fa fa-info-circle"></i>
                                         <p>About</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('auth/blocked'); ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-comments"></i>
                                         <p>Feedback</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?php echo base_url('welcome/guide'); ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-download"></i>
                                         <p>Guide</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../examples/project_add.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-download"></i>
                                         <p>Download</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../examples/project_edit.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fa fa-user"></i>
                                         <p>Profil Brol</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../examples/project_detail.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fa fa-database"></i>
                                         <p>Metadata</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('auth/daftar') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-user-plus"></i>
                                         <p>Daftar</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('auth') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-lock"></i>
                                         <p>Login</p>
                                     </a>
                                 </li>
