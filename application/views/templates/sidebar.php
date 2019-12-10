@@ -167,49 +167,49 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="<?= base_url('user') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-home"></i>
                                         <p>Home</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('user/about'); ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fa fa-info-circle"></i>
                                         <p>About</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('user/feedback'); ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-comments"></i>
                                         <p>Feedback</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('user/guide'); ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-download"></i>
                                         <p>Guide</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../examples/project_add.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-download"></i>
                                         <p>Download</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../examples/project_edit.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fa fa-user"></i>
                                         <p>Profil Brol</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../examples/project_detail.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fa fa-database"></i>
                                         <p>Metadata</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('user/profil'); ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-user"></i>
                                         <p>Profil</p>
                                     </a>
                                 </li>
@@ -236,75 +236,3 @@
                 <!-- /.sidebar-menu -->
             </div>
         </aside>
-        <!-- <div class="card card-primary card-tabs">
-            <div class="card card-primary card-tabs">
-                <div class="card-header p-0 pt-1">
-                    <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Degree Minute Second</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Decimal</a>
-                        </li>
-                    </ul>
-                </div> -->
-        <!-- <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-one-tabContent">
-                        <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab"> -->
-        <!-- Lorem ipsum dolor sit amet.   -->
-        <!-- </div>
-                        <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </li>
-        </ul>
-        <li class="nav-item has-treeview">
-            <a href="#" class="nav-link active">
-                <center>
-                    <b>Dataset</b>
-                </center>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">
-                        <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                        <p>UAV</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                        <p>MODIS</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                        <p>Terra MODIS</p>
-                    </a>
-                </li>
-
-                <form class="form-inline ml-3">
-                    <div class="input-group input-group-sm">
-                        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-navbar" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <br>
-                <button type="button" class="btn btn-default waves-effect right"><b>RESULT</b></button>
-            </ul>
-            </ul>
-        </li>
-        </li>
-        </ul>
-        </nav>
-        </div>
-        </aside> -->

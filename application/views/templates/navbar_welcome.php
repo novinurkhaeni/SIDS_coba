@@ -27,7 +27,7 @@
                     <a href="<?= base_url('welcome/about'); ?>" class="nav-link">About</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?= base_url('welcome/feedback'); ?>" class="nav-link">Feedback</a>
+                    <a href="<?= base_url('auth/blocked'); ?>" class="nav-link">Feedback</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="<?php echo base_url('welcome/guide'); ?>" class="nav-link">Guide</a>
