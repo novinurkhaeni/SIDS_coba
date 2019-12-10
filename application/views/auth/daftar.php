@@ -65,7 +65,7 @@
                             <p class="text-center">---------- OR ----------</p>
                             <div class="text-center">
                                 <div class="col-12">
-                                    <a class="small-left" href="<?= base_url('auth/lupa_password') ?>">Lupa Password?</a>
+                                    <a class="small-left" href="<?= base_url('auth/forgotpassword') ?>">Lupa Password?</a>
                                     <br>
                                     <a class="small-right" href="<?= base_url('auth') ?>">Sudah Punya Akun</a>
                                 </div>

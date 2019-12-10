@@ -9,6 +9,7 @@ class User extends CI_Controller
         if (!$this->session->userdata('email')) {
             redirect('welcome');
         }
+        $this->load->model('My_model');
     }
     public function index()
     {
@@ -49,11 +50,25 @@ class User extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['title'] = 'Feedback';
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('welcome/feedback', $data);
-        $this->load->view('templates/footer');
+
+        $this->form_validation->set_rules('options', 'Penilaian', 'required|trim');
+        $this->form_validation->set_rules('feedback', 'Message', 'required|trim');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/navbar', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('welcome/feedback', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $data = [
+                'nilai' => $this->input->post('options'),
+                'email' => $this->input->post('email'),
+                'feedback' => $this->input->post('feedback')
+            ];
+            $this->db->insert('feedback', $data);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Penilaian anda telah terkirim</div>');
+            redirect('user/feedback');
+        }
     }
 
     public function guide()
