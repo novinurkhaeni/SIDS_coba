@@ -20,8 +20,8 @@
                                 <div class="form-group">
                                     <select name="jk" id="jk" class="form-control" required>
                                         <option value="">Jenis Kelamin</option>
-                                        <option value="">Laki-laki</option>
-                                        <option value="">Perempuan</option>
+                                        <option value="Laki-laki">Laki-laki</option>
+                                        <option value="Perempuan">Perempuan</option>
                                     </select>
                                     <!-- <?= form_error('jk', '<small class="text-danger pl-3">', '</small>'); ?> -->
                                 </div>
